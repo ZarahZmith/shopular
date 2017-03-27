@@ -26,7 +26,7 @@
             <td>{{item.name}}</td>
             <td>{{item.quantity}}</td>
             <td>{{item.color}}</td>
-            <td>{{itemCtrl.finalizePrice(item) | currency:$ }}</td>
+            <td>{{itemCtrl.finalizePrice(item) | currency:$ }} <img src='/image/saleImg.png' ng-show='item.discount > 0'></td>
           </tr>
         </tbody>
       </table>
