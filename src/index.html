@@ -22,7 +22,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat='item in itemCtrl.items'>
+          <tr ng-repeat='item in itemCtrl.items | orderBy:"name"'>
             <td>{{item.name}}</td>
             <td>{{item.quantity}}</td>
             <td>{{item.color}}</td>
