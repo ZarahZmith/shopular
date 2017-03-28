@@ -3,6 +3,8 @@
 
   angular.module('shopular').controller('ItemController', ItemController);
 
+  let tax = 0.0575;
+
   function ItemController() {
     let vm = this;
 
@@ -24,8 +26,8 @@
 
     vm.finalizePrice = function finalizePrice(item) {
       let discountPrice = item.price - item.discount;
-      let tax = discountPrice * 0.0575;
-      let taxPlusPrice = discountPrice + tax;
+      vm.tax = tax;
+      let taxPlusPrice = discountPrice * (tax + 1);
       return taxPlusPrice;
     };
 
