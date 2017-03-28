@@ -14,6 +14,15 @@
     <main ng-controller='ItemController as itemCtrl'>
       <h2>Check out our goods!</h2>
 
+      <form name='additem' ng-submit='additem.$valid && itemCtrl.addItem(itemCtrl.newItem)'>
+        <input type='text' name='name' required ng-model='itemCtrl.newItem.name'>
+        <input type='price' name='price'>
+        <input type='number' name='quantity' required ng-model='itemCtrl.newItem.quantity'>
+        <input type='text' name='color' required ng-model='itemCtrl.newItem.color'>
+        <input type='number' name='discount' required>
+        <input type='submit' value='Add Item'>
+      </form>
+
       <table>
         <thead>
           <tr>
@@ -24,7 +33,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat='item in itemCtrl.items | orderBy:"name"'>
+          <tr ng-repeat='item in itemCtrl.items | orderBy:"price"'>
             <td>{{item.name}}</td>
             <td>{{item.quantity}}</td>
             <td>{{item.color}}</td>
