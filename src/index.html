@@ -15,11 +15,11 @@
       <h2>Check out our goods!</h2>
 
       <form name='additem' ng-submit='additem.$valid && itemCtrl.addItem(itemCtrl.newItem)'>
-        <input type='text' name='name' required ng-model='itemCtrl.newItem.name'>
-        <input type='price' name='price' ng-model='itemCtrl.newItem.price'>
-        <input type='number' name='quantity' required ng-model='itemCtrl.newItem.quantity'>
-        <input type='text' name='color' required ng-model='itemCtrl.newItem.color'>
-        <input type='price' name='discount' required ng-model='itemCtrl.newItem.discount'>
+        <input type='text' name='name' placeholder='Item Name' required ng-model='itemCtrl.newItem.name'>
+        <input type='price' name='price' placeholder='Price' required ng-model='itemCtrl.newItem.price'>
+        <input type='number' name='quantity' placeholder='Quantity' required ng-model='itemCtrl.newItem.quantity'>
+        <input type='text' name='color' placeholder='Color' required ng-model='itemCtrl.newItem.color'>
+        <input type='price' name='discount' placeholder='Discount' required ng-model='itemCtrl.newItem.discount'>
         <input type='submit' value='Add Item'>
       </form>
 
