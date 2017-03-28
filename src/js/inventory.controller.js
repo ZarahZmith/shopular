@@ -45,8 +45,7 @@
         color: item.color,
         discount: item.discount
       });
-
-    }
+    };
 
   }
 }());
