@@ -1,0 +1,10 @@
+table {
+  border: 1px solid #e629a6;
+  width: 80%;
+  margin: auto; }
+  table tbody tr:nth-child(odd) {
+    background-color: #e629a6; }
+  table td {
+    padding: 1em; }
+
+/*# sourceMappingURL=styles.css.map */
