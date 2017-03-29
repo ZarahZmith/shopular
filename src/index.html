@@ -15,7 +15,7 @@
       <h2>Check out our goods!</h2>
 
       <!-- TODO fix minimum value in price/discount fields -->
-      <form name='additem' ng-submit='additem.$valid && itemCtrl.addItem(itemCtrl.newItem)'>
+      <form name='additem' ng-submit='additem.$valid && itemCtrl.addItem(itemCtrl.newItem)' novalidate>
 
         <input type='text' name='name' placeholder='Item Name' required ng-model='itemCtrl.newItem.name'>
         <p ng-show='additem.name.$touched && !additem.name.$valid'>The name of your item is invalid!</p>
@@ -52,6 +52,7 @@
             </th>
           </tr>
         </thead>
+
         <tbody>
           <tr ng-repeat='item in itemCtrl.items | orderBy:itemCtrl.sortType:itemCtrl.sortReverse'>
             <td>{{item.name}}</td>
@@ -71,6 +72,7 @@
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js'></script>
     <script src='/js/shopular.module.js'></script>
     <script src='/js/inventory.controller.js'></script>
+    <script src='/js/shop.service.js'></script>
 
   </body>
 </html>
