@@ -52,7 +52,10 @@
       }
       //if there is no quantity or discount set them to 0
 
+      let itemID = Date.now();
+
       vm.items.push({
+        id: itemID;
         name: item.name,
         price: item.price,
         quantity: item.quantity,
