@@ -55,7 +55,7 @@
       let itemID = Date.now();
 
       vm.items.push({
-        id: itemID;
+        id: itemID,
         name: item.name,
         price: item.price,
         quantity: item.quantity,
