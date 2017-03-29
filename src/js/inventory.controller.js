@@ -9,6 +9,8 @@
     let vm = this;
 
     vm.newItem = {};
+    vm.sortType = 'price';
+    vm.sortReverse = false;
 
     vm.items = [
       { "id": 2957, "name": "widget", "price": 32, "quantity": 203, "color": "red", "discount": 31 },
@@ -50,7 +52,7 @@
       if (Number.isNaN(item.price)) {
         return;
       }
-      //if there is no quantity or discount set them to 0
+      //TODO if there is no quantity or discount set them to 0
 
       let itemID = Date.now();
 
@@ -63,6 +65,12 @@
         discount: item.discount
       });
       vm.newItem = {};
+    };
+
+    vm.changeSort = function changeSort(sortField) {
+      // this does not work
+      vm.sortType = sortField;
+      vm.sortReverse = !vm.sortReverse;
     };
 
   }

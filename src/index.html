@@ -14,31 +14,46 @@
     <main ng-controller='ItemController as itemCtrl'>
       <h2>Check out our goods!</h2>
 
+      <!-- TODO fix minimum value in price/discount fields -->
       <form name='additem' ng-submit='additem.$valid && itemCtrl.addItem(itemCtrl.newItem)'>
+
         <input type='text' name='name' placeholder='Item Name' required ng-model='itemCtrl.newItem.name'>
         <p ng-show='additem.name.$touched && !additem.name.$valid'>The name of your item is invalid!</p>
-        <input type='price' name='price' placeholder='Price' required ng-model='itemCtrl.newItem.price'>
+
+        <input type='number' name='price' placeholder='Price' min='0' required ng-model='itemCtrl.newItem.price'>
         <p ng-show='additem.price.$touched && !additem.price.$valid'>The price for your item is invalid!</p>
-        <input type='number' name='quantity' placeholder='Quantity' required ng-model='itemCtrl.newItem.quantity'>
+
+        <input type='number' name='quantity' placeholder='Quantity' min='0' required ng-model='itemCtrl.newItem.quantity'>
         <p ng-show='additem.quantity.$touched && !additem.quantity.$valid'>The quantity for your item is invalid!</p>
+
         <input type='text' name='color' placeholder='Color' required ng-model='itemCtrl.newItem.color'>
         <p ng-show='additem.color.$touched && !additem.color.$valid'>The color of your item is invalid!</p>
-        <input type='price' name='discount' placeholder='Discount' required ng-model='itemCtrl.newItem.discount'>
+
+        <input type='number' name='discount' placeholder='Discount' min='0' required ng-model='itemCtrl.newItem.discount'>
         <p ng-show='additem.discount.$touched && !additem.discount.$valid'>The discount for your item is invalid!</p>
+
         <input type='submit' value='Add Item'>
       </form>
 
       <table>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Quantity</th>
-            <th>Color</th>
-            <th>Price</th>
+            <th ng-click='itemCtrl.changeSort("name")'>
+              Name
+            </th>
+            <th ng-click='itemCtrl.changeSort("quantity")'>
+              Quantity
+            </th>
+            <th>
+              Color
+            </th>
+            <th ng-click='itemCtrl.changeSort("price")'>
+              Price
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat='item in itemCtrl.items | orderBy:"price"'>
+          <tr ng-repeat='item in itemCtrl.items | orderBy:itemCtrl.sortType:itemCtrl.sortReverse'>
             <td>{{item.name}}</td>
             <td>{{item.quantity}}</td>
             <td>{{item.color}}</td>
