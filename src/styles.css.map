@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,KAAM;EACF,MAAM,EAAE,iBAAiB;EACzB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI;EAEZ,6BAAuB;IACrB,gBAAgB,EAAE,OAAO;EAG3B,QAAG;IACD,OAAO,EAAE,GAAG;;ACVlB,2BAA4B;EACpB,MAAM,EAAE,iBAAiB",
-"sources": ["sass/table.scss","sass/validity.scss"],
+"mappings": "AAAA,KAAM;EACF,MAAM,EAAE,iBAAiB;EACzB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI;EAEZ,6BAAuB;IACrB,gBAAgB,EAAE,OAAO;EAG3B,QAAG;IACD,OAAO,EAAE,GAAG;;ACVlB,2BAA4B;EACpB,MAAM,EAAE,iBAAiB;;ACDjC,IAAK;EACH,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI;EAEZ,UAAM;IACJ,MAAM,EAAE,GAAG",
+"sources": ["sass/table.scss","sass/validity.scss","sass/inventory_form.scss"],
 "names": [],
 "file": "styles.css"
 }

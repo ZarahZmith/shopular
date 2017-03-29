@@ -1,5 +1,5 @@
 table {
-  border: 1px solid #e629a6;
+  border: 3px solid #e629a6;
   width: 80%;
   margin: auto; }
   table tbody tr:nth-child(odd) {
@@ -9,5 +9,11 @@ table {
 
 input.ng-invalid.ng-touched {
   border: 1px solid #ff0000; }
+
+form {
+  width: 80%;
+  margin: auto; }
+  form input {
+    margin: 1em; }
 
 /*# sourceMappingURL=styles.css.map */
