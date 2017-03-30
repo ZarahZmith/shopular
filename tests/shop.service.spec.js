@@ -5,5 +5,7 @@
 
   describe('Shop Service', function() {
 
+    beforeEach.module('shopular');
+
   });
 }());
