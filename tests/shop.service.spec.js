@@ -13,8 +13,11 @@
       ShopService = _ShopService_;
     }));
 
-    it('should add 1 + 1', function() {
-      expect(1 + 1).to.equal(2);
+    describe('get data function', function() {
+      it('should be able to get an array of all items', function() {
+        let result = ShopService.getAllItems();
+        expect(result).to.be.an('array');
+      });
     });
 
   });
