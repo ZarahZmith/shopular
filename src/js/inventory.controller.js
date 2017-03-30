@@ -34,7 +34,7 @@
      * @return {void}
      */
     vm.addItem = function addItem(item) {
-      ShopService.getData(item);
+      ShopService.createItem(item);
       vm.newItem = {};
     };
 

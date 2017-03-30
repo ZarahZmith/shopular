@@ -12,7 +12,7 @@
      * @param {Object} item the item to add containing id, name, price, quantity, color, and discount
      * @return {void}
      */
-    function getData(item) {
+    function createItem(item) {
       if (typeof(item) !== 'object' || typeof(item.name) !== 'string' || item.name.length < 1) {
         return;
       }
@@ -55,7 +55,7 @@
     }
 
     return {
-      getData: getData,
+      createItem: createItem,
       getAllItems: getAllItems
     };
   }
