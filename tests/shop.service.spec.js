@@ -33,6 +33,11 @@
         });
         let item = ShopService.getAllItems();
         expect(item.length).to.equal(1);
+        expect(item[0].name).to.equal('Carrot' + now);
+        expect(item[0].price).to.equal(4.99);
+        expect(item[0].quantity).to.equal(55);
+        expect(item[0].color).to.equal('orange');
+        expect(item[0].discount).to.equal(0);
       });
     });
 
