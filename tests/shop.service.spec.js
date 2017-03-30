@@ -20,5 +20,21 @@
       });
     });
 
+    describe('adding new items', function() {
+      it('should get an item with all of the required info', function() {
+        expect(ShopService.getAllItems().length).to.equal(0);
+        let now = Date.now();
+        ShopService.createItem({
+          name: 'Carrot' + now,
+          price: 4.99,
+          quantity: 55,
+          color: 'orange',
+          discount: 0
+        });
+        let item = ShopService.getAllItems();
+        expect(item.length).to.equal(1);
+      });
+    });
+
   });
 }());
