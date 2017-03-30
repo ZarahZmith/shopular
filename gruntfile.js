@@ -14,13 +14,17 @@ module.exports = function(grunt) {
             'node_modules/angular-mocks/angular-mocks.js',
             'src/js/shopular.module.js',
             'src/js/**/*.js',
-            'test/**/*.spec.js'
-          ]
-
+            'tests/**/*.spec.js'
+          ],
+          singleRun: true
         }
       }
     }
 
   });
+
+  require('load-grunt-tasks')(grunt);
+
+  grunt.registerTask('build', ['karma']);
 
 };
