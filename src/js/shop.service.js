@@ -28,7 +28,9 @@
       if (Number.isNaN(item.discount) || item.discount < 0) {
         return;
       }
-      
+      if (typeof(item.color) !== 'string') {
+        return;
+      }
       //TODO if there is no quantity or discount set them to >= 0, number has to be a string/no color is null
 
       let itemID = Date.now();
