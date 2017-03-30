@@ -17,10 +17,19 @@
         return;
       }
       item.price = Number(item.price);
-      if (Number.isNaN(item.price)) {
+      if (Number.isNaN(item.price) || item.price < 0.01) {
         return;
       }
-      //TODO if there is no quantity or discount set them to 0
+      item.quantity = Number(item.quantity);
+      if (Number.isNaN(item.quantity) || item.quantity < 0) {
+        return;
+      }
+      item.discount = Number(item.discount);
+      if (Number.isNaN(item.discount) || item.discount < 0) {
+        return;
+      }
+      
+      //TODO if there is no quantity or discount set them to >= 0, number has to be a string/no color is null
 
       let itemID = Date.now();
 
