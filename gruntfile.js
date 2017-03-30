@@ -11,7 +11,8 @@ module.exports = function(grunt) {
           browsers: [ 'Chrome' ],
           files: [
             'src/js/shopular.module.js',
-            'src/js/**/*.js'
+            'src/js/**/*.js',
+            'test/**/*.spec.js'
           ]
 
         }
