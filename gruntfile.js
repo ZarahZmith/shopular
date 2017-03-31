@@ -4,6 +4,28 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
+    concat: {
+      alljs: {
+        options: {
+          sourceMap: true
+        },
+        src: [ 'src/js/shopular.module.js', 'src/js/**/*.js' ],
+        dest: 'build/js/app.js'
+      }
+    },
+
+    babel: {
+      all: {
+        options: {
+          presets: ['es2015'],
+          sourceMap: true
+        },
+        files: {
+          'build/js/app.js':'build/js/app.js'
+        }
+      }
+    },
+
     karma: {
       all: {
         options: {
@@ -25,6 +47,6 @@ module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
 
-  grunt.registerTask('build', ['karma']);
+  grunt.registerTask('build', ['karma', 'concat', 'babel']);
 
 };
