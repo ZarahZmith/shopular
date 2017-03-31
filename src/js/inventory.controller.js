@@ -38,6 +38,11 @@
       vm.newItem = {};
     };
 
+    /**
+     * Allows you to change the field in which the items are sorted
+     * @param  {Object} sortField The field in which the sort occurs
+     * @return {void}
+     */
     vm.changeSort = function changeSort(sortField) {
       // this does not work
       vm.sortType = sortField;
