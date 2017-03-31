@@ -37,6 +37,7 @@
 
     it('should have all the things we expect it to', function() {
       expect(ItemController).to.be.an('object');
+      expect(ItemController.newItem).to.be.an('object');
     });
 
     //TODO describes to test each individual fn
