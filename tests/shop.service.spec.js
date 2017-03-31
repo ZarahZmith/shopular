@@ -75,5 +75,20 @@
       });
     });
 
+    it('should ensure no new item is created if the discount is a neagtive number', function() {
+      expect(ShopService.getAllItems().length).to.equal(0);
+      let now = Date.now();
+      ShopService.createItem({
+        id: now,
+        name: 'box of crayons',
+        price: 3,
+        quantity: 20,
+        color: 'assorted',
+        discount: -3
+      });
+      let item = ShopService.getAllItems();
+      expect(item.length).to.equal(0);
+    });
+
   });
 }());
