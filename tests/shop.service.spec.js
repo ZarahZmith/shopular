@@ -44,11 +44,12 @@
         expect(item[0].discount).to.equal(0);
       });
 
-      it('should get no item if the price is below 1 cent', function() {
+      it('should get no new item if the price is below 1 cent', function() {
         expect(ShopService.getAllItems().length).to.equal(0);
         let now = Date.now();
         ShopService.createItem({
-          name: 'Hammer' + now,
+          id: now,
+          name: 'Hammer',
           price: 0,
           quantity: 2,
           color: 'silver',
@@ -57,6 +58,7 @@
         let item = ShopService.getAllItems();
         expect(item.length).to.equal(0);
       });
+
     });
 
   });
