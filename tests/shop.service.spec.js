@@ -59,6 +59,20 @@
         expect(item.length).to.equal(0);
       });
 
+      it('should get no new item if the quantity is negative', function() {
+        expect(ShopService.getAllItems().length).to.equal(0);
+        let now = Date.now();
+        ShopService.createItem({
+          id: now,
+          name: 'mouse',
+          price: 9.99,
+          quantity: -3,
+          color: 'white',
+          discount: 1
+        });
+        let item = ShopService.getAllItems();
+        expect(item.length).to.equal(0);
+      });
     });
 
   });
