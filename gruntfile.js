@@ -38,7 +38,14 @@ module.exports = function(grunt) {
             'src/js/**/*.js',
             'tests/**/*.spec.js'
           ],
-          singleRun: true
+          singleRun: true,
+          preprocessors: {
+            'src/js/**/*.js' : [ 'coverage' ]
+          },
+          reporters: [ 'dots', 'coverage' ],
+          coverageReporter: {
+            type: 'text-summary'
+          }
         }
       }
     }
