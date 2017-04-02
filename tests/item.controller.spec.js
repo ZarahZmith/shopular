@@ -39,6 +39,7 @@
       expect(ItemController).to.be.an('object');
       expect(ItemController.newItem).to.be.an('object');
       expect(ItemController.sortType).to.be.a('string');
+      expect(ItemController.sortReverse).to.equal(false);
     });
 
     //TODO describes to test each individual fn
