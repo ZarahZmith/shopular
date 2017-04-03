@@ -41,6 +41,9 @@
       expect(ItemController.sortType).to.be.a('string');
       expect(ItemController.sortReverse).to.equal(false);
       expect(ItemController.items).to.be.an('array');
+      expect(ItemController.finalizePrice).to.be.a('function');
+      expect(ItemController.addItem).to.be.a('function');
+      expect(ItemController.changeSort).to.be.a('function');
     });
 
     //TODO describes to test each individual fn
