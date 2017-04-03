@@ -41,12 +41,26 @@
       expect(ItemController.sortType).to.be.a('string');
       expect(ItemController.sortReverse).to.equal(false);
       expect(ItemController.items).to.be.an('array');
-      expect(ItemController.finalizePrice).to.be.a('function');
-      expect(ItemController.addItem).to.be.a('function');
-      expect(ItemController.changeSort).to.be.a('function');
     });
 
     //TODO describes to test each individual fn
+    describe('finalize price function', function() {
+      it('should do all of the things we expect the finalize price function to do', function() {
+        expect(ItemController.finalizePrice).to.be.a('function');
+      });
+    });
+
+    describe('add item function', function() {
+      it('should do all of the things we expect the add item function to do', function() {
+        expect(ItemController.addItem).to.be.a('function');
+      });
+    });
+
+    describe('change sort function', function() {
+      it('should do all of the things we expect the change sort function to do', function() {
+        expect(ItemController.changeSort).to.be.a('function');
+      });
+    });
 
   });
 
