@@ -53,6 +53,9 @@
         expect(item.discount).to.equal(55);
         ItemController.finalizePrice.discountPrice = item.price - item.discount;
         expect(ItemController.finalizePrice.discountPrice).to.equal(295.99);
+        let taxMultiplier = 1 + 0.0575;
+        ItemController.finalizePrice.taxPlusPrice = ItemController.finalizePrice.discountPrice * taxMultiplier;
+        expect(ItemController.finalizePrice.taxPlusPrice).to.equal(313.009425);
       });
     });
 
