@@ -7,6 +7,7 @@
 
     let ItemController;
     let mockShopService = {};
+    let item;
 
     beforeEach(module('shopular'));
 
@@ -47,20 +48,23 @@
     describe('finalize price function', function() {
       it('should do all of the things we expect the finalize price function to do', function() {
         expect(ItemController.finalizePrice).to.be.a('function');
+        let item = ItemController.items[0];
+        expect(item.price).to.equal(350.99);
+        expect(item.discount).to.equal(55);
       });
     });
 
-    describe('add item function', function() {
-      it('should do all of the things we expect the add item function to do', function() {
-        expect(ItemController.addItem).to.be.a('function');
-      });
-    });
+    // describe('add item function', function() {
+    //   it('should do all of the things we expect the add item function to do', function() {
+    //     expect(ItemController.addItem()).to.be.a('function');
+    //   });
+    // });
 
-    describe('change sort function', function() {
-      it('should do all of the things we expect the change sort function to do', function() {
-        expect(ItemController.changeSort).to.be.a('function');
-      });
-    });
+    // describe('change sort function', function() {
+    //   it('should do all of the things we expect the change sort function to do', function() {
+    //     expect(ItemController.changeSort()).to.be.a('function');
+    //   });
+    // });
 
   });
 
