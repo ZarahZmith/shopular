@@ -51,6 +51,8 @@
         let item = ItemController.items[0];
         expect(item.price).to.equal(350.99);
         expect(item.discount).to.equal(55);
+        ItemController.finalizePrice.discountPrice = item.price - item.discount;
+        expect(ItemController.finalizePrice.discountPrice).to.equal(295.99);
       });
     });
 
