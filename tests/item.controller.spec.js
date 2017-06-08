@@ -59,11 +59,11 @@
       });
     });
 
-    // describe('add item function', function() {
-    //   it('should do all of the things we expect the add item function to do', function() {
-    //     expect(ItemController.addItem()).to.be.a('function');
-    //   });
-    // });
+    describe('add item function', function() {
+      it('should do all of the things we expect the add item function to do', function() {
+        expect(ItemController.addItem).to.be.a('function');
+      });
+    });
 
     // describe('change sort function', function() {
     //   it('should do all of the things we expect the change sort function to do', function() {
