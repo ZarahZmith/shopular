@@ -70,6 +70,7 @@
           color: 'red',
           discount: 1
         });
+        expect(mockShopService.createItem).to.be.a('function');
         expect(ItemController.newItem).to.be.an('object');
       });
     });
