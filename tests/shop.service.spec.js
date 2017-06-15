@@ -89,6 +89,8 @@
       let item = ShopService.getAllItems();
       expect(item.length).to.equal(0);
     });
-
+    //TODO test any additional components of the if statements
+    //        (if its an object, if something that is not what we expected is inseted into any field)
+    //TODO figure out a way to test previously untested color input
   });
 }());
