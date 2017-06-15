@@ -62,14 +62,9 @@
     describe('add item function', function() {
       it('should do all of the things we expect the add item function to do', function() {
         expect(ItemController.addItem).to.be.a('function');
-        mockShopService.createItem({
-          id: 1,
-          name: 'ball',
-          price: 5,
-          quantity: 4,
-          color: 'red',
-          discount: 1
-        });
+        ItemController.addItem = function addItem(item) {
+          mockShopService.createItem(item);
+        };
         expect(mockShopService.createItem).to.be.a('function');
         expect(ItemController.newItem).to.be.an('object');
       });
